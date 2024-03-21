@@ -1,7 +1,7 @@
 function main
     n_max = 200;
-    a = 10;
-    r_max = a/2; 
+    a = 20;
+    r_max = a/3; 
     
     [circles, index_number] = generate_circles(a, r_max, n_max);
     plot_circles(a, circles, index_number); 

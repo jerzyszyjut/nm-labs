@@ -12,7 +12,6 @@ function [circles, index_number, circle_areas, rand_counts, counts_mean] = gener
     % r_max - maksymalny promień okręgu
     % n_max - maksymalna liczba okręgów
     % circles - macierz zawierająca informacje o okręgach
-    % index_number - liczba okręgów
     index_number = 193064;
     L1 = mod(index_number, 10);
 
@@ -58,7 +57,6 @@ end
 function plot_circles(a, circles, index_number)
     % a - długość boku kwadratu
     % circles - macierz zawierająca informacje o okręgach
-    % index_number - liczba okręgów
     figure
     hold on
     axis equal
