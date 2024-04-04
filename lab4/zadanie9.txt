@@ -1,0 +1,11 @@
+Dla x0 = 6 funkcja fzero na początku zwiększa zakres poprzez odejmowanie od a i b, dopóki f(a) i f(b) nie będą przeciwnych znaków. 
+Następnie dla znalezionego zakresu używa algorytmu odwrotnej interpolacji kwadratowej dopóki wartość funkcji f(x) się nie zmienia.
+
+Dla x0 = 4.5 funkcja fzero na początku również zwiększa zakres poprzez odejmowanie od a i b, dopóki f(a) i f(b) nie będą przeciwnych znaków. 
+Następnie dla znalezionego zakresu stosuje zamiennie algorytmy bisekcji i interpolacji kwadratowej. 
+Jako, że przy punkcie 4.5 nie istnieje miejsce zerowe dla funkcji tangens, ale w tej okolicy jest rozbieżna, to funkcja fzero
+informuje nas, że ze względu na zmianę znaku przerwano wyszukiwanie, ale gdzieś w tej okolicy znajduje się miejsce zerowe.
+
+Wnioski:
+Funkcja fzero stosuje algorytmy bisekcji i interpolacji kwadratowej w celu efektywnego znajdowania miejsc zerowych.
+Funkcja fzero zwróci błędny wynik, gdy badana funkcja jest rozbieżna w danym punkcie. 

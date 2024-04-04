@@ -1,0 +1,10 @@
+Norma błędu rezydualnego (iteracje=400) dla: 
+a) metody Jacobiego - 1.7405e+200 w czasie (1.7834s)
+b) metody Gaussa-Seidla - 8.0111e+03 w czasie (112.1017s)
+c) metody bezpośredniej - 7.0863e-13 w czasie (0.5371s)
+
+Metody iteracyjne zbiegają do nieskończoności
+
+Wydaje się, że dla pewnych specyficznych macierzy metody iteracyjne nie są zbieżne.
+Należałoby zatem sprawdzać przez wykonywaniem danego algorytmu czy macierze są zbieżne dla niego
+lub po przekroczeniu pewnego progu kończyć algorytm i uruchamiać inny.
