@@ -31,7 +31,6 @@ function [matrix_condition_numbers, max_coefficients_difference_1, max_coefficie
     subplot(3,1,2);
     %% chart 2
     max_coefficients_difference_1 = zeros(1, length(N));
-
     a1 = randi([20,30]);
     for i = 1:length(N)
         ni = N(i);
@@ -43,11 +42,10 @@ function [matrix_condition_numbers, max_coefficients_difference_1, max_coefficie
         
         % Wyznacznie współczynników wielomianu interpolującego
         calculated_coefficients = V \ b;
-
+    
         max_coefficients_difference_1(i) = max(abs(calculated_coefficients-reference_coefficients));
     end
-
-    semilogy(N, max_coefficients_difference_1, 'DisplayName', 'max(|c_{ref} - c|)');
+    plot(N, max_coefficients_difference_1, 'DisplayName', 'Maksymalna różnica między współczynnikami');
     xlabel('N');
     ylabel('max(|c_{ref} - c|)');
     title('Maksymalna różnica między referencyjnymi a obliczonymi współczynnikami wielomianu');
@@ -71,7 +69,7 @@ function [matrix_condition_numbers, max_coefficients_difference_1, max_coefficie
     end
 
     subplot(3,1,3);
-    semilogy(N, max_coefficients_difference_2, 'DisplayName', 'max(|c_{ref} - c|)');
+    plot(N, max_coefficients_difference_2, 'DisplayName', 'max(|c_{ref} - c|)');
     xlabel('N');
     ylabel('max(|c_{ref} - c|)');
     title('Maksymalna różnica między referencyjnymi a obliczonymi współczynnikami wielomianu');
